@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+            body{
+                background-color: rgb(180, 250, 250);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .music{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .b1{
+               
+                background-color: rgb(91, 134, 134);
+                height: 50px;
+                padding: 15px 20px;
+                cursor: pointer;
+                margin: 10px;
+                border-radius: 8px;
+
+            }   
+           
+            </style>
+    <script>
+        function plays(){
+            var a=new Audio("/tom-1.mp3");
+            a.play();
+            
+        }
+        document.addEventListener("keydown",function(event){
+            if(event.key.toLowerCase()==='a')
+        {
+            plays();
+        }
+        })
+        function break1(){
+            var b=new Audio("/breaksound.mp3");
+            b.play();
+        }
+        document.addEventListener("keypress",function(event){
+            if(event.key.toLowerCase()==='b')
+        {
+            break1();
+        }
+        })  
+        function beat(){
+            var beat=new Audio("/beat.mp3");
+            beat.play();
+        }
+        document.addEventListener("keypress",function(event){
+            if(event.key.toLowerCase()==='c')
+        {
+            beat();
+        }
+        }) 
+        function peace(){
+            var pea=new Audio("/peace.mp3");
+            pea.play();
+        }
+        document.addEventListener("keypress",function(event){
+            if(event.key.toLowerCase()==='d')
+        {
+            peace();
+        }
+        })
+        function rock(){
+            var r=new Audio("/rock.mp3");
+            r.play();
+        }
+        document.addEventListener("keypress",function(event){
+            if(event.key.toLowerCase()==='e')
+        {
+            rock();
+        }
+        })     
+    </script>
+    
+</head>
+<body>
+    <div class="a">
+    <h1 style="font-size: 100px;">MUSIC !!!</h1>
+    
+    <div class="music">
+    <button onclick="break1()"class="b1">break</button>
+    <button onclick="plays()"class="b1">drum</button>
+    <button onclick="beat()" class="b1">beat</button>
+    <button onclick="rock()"class="b1">rock</button>
+    <button onclick="peace()"class="b1">peace</button>
+    <p><img src="img.jpeg" width="500px" height="500px"></p>
+</div>
+</body>
+</html>
